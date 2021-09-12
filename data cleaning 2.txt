@@ -1,0 +1,34 @@
+import numpy as np 
+import pandas as pd 
+
+df = pd.read_csv("Latest Covid-19 India Status.csv")
+
+df
+
+#if you want to display the shape of table 
+
+df.shape
+
+#if you want to know the null or not null value column 
+
+df.info(null_counts=True)
+
+#if you want to calcute the mean of column of table 
+
+df.Active.mean()
+
+#if we want to acess the data of any column 
+
+df.Active
+
+# if we want to multiply the column value 
+
+df.Active.apply(lambda x: x * x)
+
+# if we want to sort the value of any column 
+
+df.sort_values(by='Active')
+
+# if we want to display the specific data with column 
+
+df[(df.Active == 2.0) & (df.Deaths == 4.0)]
